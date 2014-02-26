@@ -17,7 +17,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+	NSMutableArray *testArray = [[NSMutableArray alloc] init];
+	for (int i = 40; i >= 0; i--)
+	{
+		NSNumber *num = [NSNumber numberWithInt:i];
+		[testArray addObject:num];
+	}
+	
+	NSMutableArray *newArray = [testArray arrayByQuickSort];
+	NSMutableArray *secondArray = [testArray arrayByHeapSort];
+	
+	for (NSNumber *num in newArray)
+	{
+		NSLog(@"Quicksort test: %@", num);
+	}
+	for (NSNumber *num in secondArray)
+	{
+		NSLog(@"Heapsort test: %@", num);
+	}
 }
 
 - (void)didReceiveMemoryWarning

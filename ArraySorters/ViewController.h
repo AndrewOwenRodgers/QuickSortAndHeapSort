@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSMutableArray+Sorters.h"
 
 @interface ViewController : UIViewController
 
